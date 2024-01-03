@@ -226,9 +226,9 @@ if __name__ == "__main__":
 
         # add watermark
         # if you want to generate videos with no watermark (for evaluation), remove this code block.
-        no_watermark_video_path = f"{output_video_path}-no_watermark.mp4"
-        shutil.move(output_video_path, no_watermark_video_path)
-        os.system(
-            f'ffmpeg -y -i {no_watermark_video_path} -vf  "movie=media/watermark.png,scale= 120: 36[watermask]; [in] [watermask] overlay=140:220 [out]" {output_video_path}'
-        )
-        os.remove(no_watermark_video_path)
+        # no_watermark_video_path = f"{output_video_path}-no_watermark.mp4"
+        # shutil.move(output_video_path, no_watermark_video_path)
+        # os.system(
+        #     f'ffmpeg -y -i {no_watermark_video_path} -vf  "movie=media/watermark.png,scale= 120: 36[watermask]; [in] [watermask] overlay=140:220 [out]" {output_video_path}'
+        # )
+        # os.remove(no_watermark_video_path)
